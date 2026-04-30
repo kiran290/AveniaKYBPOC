@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(printenv)",
+      "PowerShell($names = 'AVENIA_API_KEY','AVENIA_BASE_URL','AVENIA_PRIVATE_KEY_PEM','AVENIA_COMPANY_TAX_ID','AVENIA_UBO_PROFILE','AVENIA_UBO_DOCUMENT_COUNTRY','AVENIA_UBO_ID_DOCUMENT_TYPE','AVENIA_UBO_ID_FILE','AVENIA_RESUME_SUBACCOUNT_ID','AVENIA_RESUME_CERT_DOC_ID','AVENIA_RESUME_TAX_DOC_ID','AVENIA_RESUME_POFC_DOC_ID','AVENIA_RESUME_REVENUE_DOC_ID','AVENIA_RESUME_UBO_ID_DOC_ID'; foreach \\($n in $names\\) { $v = [Environment]::GetEnvironmentVariable\\($n\\); if \\([string]::IsNullOrWhiteSpace\\($v\\)\\) { Write-Output \"$n = <not set>\" } else { $shown = if \\($n -eq 'AVENIA_PRIVATE_KEY_PEM'\\) { '<' + $v.Length + ' chars>' } elseif \\($n -eq 'AVENIA_API_KEY'\\) { '<' + $v.Length + ' chars>' } else { $v }; Write-Output \"$n = $shown\" } })"
+    ]
+  }
+}
